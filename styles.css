@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding-top: 1em;
+}
+
+img {
+    display: block;
+    margin: 1.5em auto 1em auto;
+    max-height: 250px;
+    object-fit: contain;
+    max-width: 90%;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+}
+
+#caption-container {
+    max-width: 80%;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.flex-items {
+    background-color: aquamarine;
+    margin: 1em;
+    padding: 2em;
+}
+
+#sign-off {
+    margin-bottom: 1em;
+}
+
+#current-weather {
+    line-height: 1.5;
+    padding: 1em;
+    font-size: 1.25em;
+}
+
+#show-answer {
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+#sign-off {
+    padding: 1em;
+    font-size: 1.5rem;
+}
+
+#trivia,
+#dad-joke {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
