@@ -65,4 +65,14 @@ img {
 #dad-joke {
     font-size: 1.25rem;
     line-height: 1.5;
+    max-width: 80%;
+    margin: 1em auto;
+}
+
+#jeopardy-answer {
+    background-color: aquamarine;
+    width: 25%;
+    margin: 0 auto 1em auto;
+    font-size: 1.25rem;
+
 }

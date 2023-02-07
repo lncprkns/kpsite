@@ -1,6 +1,8 @@
 import imageData from "./imgdata.js"
 import {BEACH_PIC_API_KEY, WEATHER_API_KEY } from "./apikeys.js"
 
+let jeopardyQuestion
+
 
 function displayImg() {
     const selectImage = Math.floor(Math.random() * imageData.length)
@@ -51,24 +53,19 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=6103
 
 fetch("https://jservice.io/api/random")
     .then(res => res.json())
-    .then(answer => document.getElementById("trivia").innerHTML = `
-    <p>Difficulty: $${answer[0].value}</p>
-    <p>Category: ${answer[0].category.title}</p>
-    <p>Question: ${answer[0].question}</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p id="answer">Answer: ${answer[0].answer}</p>
-    `)
+    .then(answer => {  
+
+        document.getElementById("trivia").innerHTML = `
+        <p>Difficulty: $${answer[0].value}</p>
+        <br>
+        <p>Category: ${answer[0].category.title}</p>
+        <br>
+        <p>Question: ${answer[0].question}</p>`
+
+        document.getElementById("jeopardy-answer").innerHTML = `
+        <p id="answer">The answer is: ${answer[0].answer}</p>
+        `
+    })
 
 fetch("https://icanhazdadjoke.com/", {
     headers: {
