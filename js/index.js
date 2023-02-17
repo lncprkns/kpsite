@@ -86,8 +86,11 @@ fetch(`https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${WORDNIK_API_
     .then(res => res.json())
     .then(word => {
         document.getElementById("word-of-the-day").innerHTML = `
-        <p>Your word of the day!
-        <a href="https://www.wordnik.com/words/${word.word}"><img src="/wordnik_badge_a2.png" alt="Powered by Wordnik"></a>
+        <a id="wordnik-link" href="https://www.wordnik.com/words/${word.word}"><img id="wordnik-badge" src="/wordnik_badge_a2.png" alt="Powered by Wordnik"></a>
+        <p id="word-intro"> Your word of the day!</p>
+        
+        
+         
         <p id="word">${word.word}</p>
         `
         for (let i = 0; i < word.definitions.length; i++) {

@@ -80,6 +80,20 @@ hr {
     letter-spacing: 2px;
 }
 
+#word-intro {
+    display: inline;
+}
+
+#word {
+    margin: 1em auto;
+    font-size: 1.5rem;
+}
+
+#wordnik-badge {
+    margin: 0 auto 1em;
+    padding: 0;
+}
+
 #trivia,
 #jeopardy-answer {
     background-color: #060CE9;
@@ -114,7 +128,7 @@ hr {
 }
 
 #jeopardy-dollar {
-    color: hsl(62, 61%, 55%);
+    color: hsl(62, 100%, 53%);
     font-family: Helvetica, sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
