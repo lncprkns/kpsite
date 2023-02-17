@@ -1,5 +1,5 @@
 import imageData from "./imgdata.js"
-import { BEACH_PIC_API_KEY, WEATHER_API_KEY, WORDNIK_API_KEY } from "./apikeys.js"
+import { BEACH_PIC_API_KEY, WEATHER_API_KEY, WORDNIK_API_KEY } from "./apikeys"
 
 let jeopardyQuestion
 let time = "12:00 PM"
