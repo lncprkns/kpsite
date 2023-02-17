@@ -1,13 +1,12 @@
 import imageData from "./imgdata.js"
 import { BEACH_PIC_API_KEY, WEATHER_API_KEY, WORDNIK_API_KEY } from "./apikeys.js"
 
-let jeopardyQuestion
-let time = "12:00 PM"
-const date = new Date()
+
+const currentTime = new Date().toLocaleTimeString("en-us", {timeStyle: "short"})
 
 // Determines whether the greeting is good morning or hello based on the time
 
-if(date.toLocaleTimeString("en-us", {timeStyle: "short"}) < time) {
+if(currentTime.slice(-2) == "AM") {
     document.getElementById("greeting").textContent = "Good morning my love!"
 } else {
     document.getElementById("greeting").textContent = "Hello my love!"
