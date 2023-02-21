@@ -80,13 +80,28 @@ hr {
     letter-spacing: 2px;
 }
 
+.min-max-temp,
+.uv-sunset {
+    display: flex;
+    justify-content: space-around;
+    margin: .5em auto;
+}
+
+.min-max-temp {
+    font-size: 1.5em;
+}
+
+.uv-sunset {
+    padding-left: .5em;
+}
+
 #word-intro {
     display: inline;
 }
 
 #word {
-    margin: 1em auto;
-    font-size: 1.5rem;
+    margin: 0.25em auto;
+    font-size: 2.5rem;
 }
 
 #wordnik-badge {
@@ -150,4 +165,20 @@ hr {
     text-align: center;
     letter-spacing: 1.5px;
     font-weight: 500;
+}
+
+#question-display {
+    margin: 3em auto;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5em;
+    line-height: 1.75;
+    background-color: #282D35;
+    color: #DEEBF8;
+    font-weight: bold;
+}
+
+#interview-link {
+    margin-bottom: 1em;
 }

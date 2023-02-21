@@ -59,23 +59,41 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${WEATHER_API_KEY}&q=6103
     .then(res => res.json())
     .then(threeDayData => document.getElementById("weather-forecast").innerHTML = `
     <p id="forecast-label">Your 3-Day Forecast</p>
-    <p>Today</p>
-    <p>Hi: ${Math.round(threeDayData.forecast.forecastday[0].day.maxtemp_f)}°F</p>
-    <p>Lo: ${Math.round(threeDayData.forecast.forecastday[0].day.mintemp_f)}°F</p>
-    <p>UV Index: ${threeDayData.forecast.forecastday[0].day.uv}</p>
-    <p>Sunset: ${threeDayData.forecast.forecastday[0].astro.sunset}</p>
+    <div class="day">
+        <p>Today</p>
+    </div>
+    <div class="min-max-temp">
+        <p>Hi: ${Math.round(threeDayData.forecast.forecastday[0].day.maxtemp_f)}°F</p>
+        <p>Lo: ${Math.round(threeDayData.forecast.forecastday[0].day.mintemp_f)}°F</p>
+    </div>
+    <div class="uv-sunset">
+        <p>UV Index: ${threeDayData.forecast.forecastday[0].day.uv}</p>
+        <p>Sunset: ${threeDayData.forecast.forecastday[0].astro.sunset}</p>
+    </div>
     <br>
-    <p>Tomorrow</p>
-    <p>Hi: ${Math.round(threeDayData.forecast.forecastday[1].day.maxtemp_f)}°F</p>
-    <p>Lo: ${Math.round(threeDayData.forecast.forecastday[1].day.mintemp_f)}°F</p>
-    <p>UV Index: ${threeDayData.forecast.forecastday[1].day.uv}</p>
-    <p>Sunset: ${threeDayData.forecast.forecastday[1].astro.sunset}</p>
+    <div class="day">
+        <p>Tomorrow</p>
+    </div>
+    <div class="min-max-temp">
+        <p>Hi: ${Math.round(threeDayData.forecast.forecastday[1].day.maxtemp_f)}°F</p>
+        <p>Lo: ${Math.round(threeDayData.forecast.forecastday[1].day.mintemp_f)}°F</p>
+    </div>
+    <div class="uv-sunset">
+        <p>UV Index: ${threeDayData.forecast.forecastday[1].day.uv}</p>
+        <p>Sunset: ${threeDayData.forecast.forecastday[1].astro.sunset}</p>
+    </div>
     <br>
-    <p>${threeDayData.forecast.forecastday[2].date}</p>
-    <p>Hi: ${Math.round(threeDayData.forecast.forecastday[2].day.maxtemp_f)}°F</p>
-    <p>Lo: ${Math.round(threeDayData.forecast.forecastday[2].day.mintemp_f)}°F</p>
-    <p>UV Index: ${threeDayData.forecast.forecastday[2].day.uv}</p>
-    <p>Sunset: ${threeDayData.forecast.forecastday[2].astro.sunset}</p>
+    <div class="day">
+        <p>${threeDayData.forecast.forecastday[2].date}</p>
+    </div>
+    <div class="min-max-temp">
+        <p>Hi: ${Math.round(threeDayData.forecast.forecastday[2].day.maxtemp_f)}°F</p>
+        <p>Lo: ${Math.round(threeDayData.forecast.forecastday[2].day.mintemp_f)}°F</p>
+    </div>
+    <div class="uv-sunset">
+        <p>UV Index: ${threeDayData.forecast.forecastday[2].day.uv}</p>
+        <p>Sunset: ${threeDayData.forecast.forecastday[2].astro.sunset}</p>
+    </div>
     `   
     )
 
@@ -86,7 +104,7 @@ fetch(`https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${WORDNIK_API_
     .then(word => {
         document.getElementById("word-of-the-day").innerHTML = `
         <a id="wordnik-link" href="https://www.wordnik.com/words/${word.word}"><img id="wordnik-badge" src="/wordnik_badge_a2.png" alt="Powered by Wordnik"></a>
-        <p id="word-intro"> Your word of the day!</p>
+        <p id="word-intro">Your word of the day!</p>
         
         
          
