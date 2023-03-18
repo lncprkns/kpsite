@@ -22,10 +22,8 @@ function displayImg() {
     
     document.getElementById('our-picture').innerHTML = `
         
-        <img src="${imgSrc}" alt="${altText}">
-        <div id="caption-container">
-        <caption>We ${imgCaption}</caption>
-        </div>
+        <img src="${imgSrc}" />
+
         `
 }
 
